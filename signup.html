@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> signup</title>
 <style>
 ul {
     list-style-type: none;
@@ -68,29 +67,31 @@ li a:hover:not(.active) {
 		<b>First name:</b><br>
 		<input type="text" name="First name">
 		<br>
-
-                <b>Last name:</b><br>
-		<input type="text" name="First name">
+        <b>Last name:</b><br>
+		<input type="text" name="Last name">
 		<br><br>
-
-                 <b>Are you ?</b><br>
-                 <input type="radio" name="gender" value="female">female&nbsp;&nbsp;
+        <b>Are you ?</b><br>
+        <input type="radio" name="gender" value="female">female&nbsp;&nbsp;
 		<input type="radio" name="gender" value="male">male<br><br>
-
-                <b>Email Address:</b><br>
-		<input type="text" name="First name">
+        <b>Email Address:</b><br>
+		<input type="text" name="email">
 		<br><br>
-                <b>Confirm Email Address:</b><br>
-		<input type="text" name="First name">
+		<b>User Type:</b>
+		<select name="usertype">
+			<option value="select">Select</option>
+			<option value="volvo">Patient</option>
+			<option value="saab">Doctor</option>
+		</select>
 		<br><br>
-                 <b>Choose Password:</b><br>
-		<input type="text" name="First name">
+        <b>Confirm Email Address:</b><br>
+		<input type="text" name="c_email">
 		<br><br>
-                <b>confirm Password:</b><br>
-		<input type="password" name="passwrd">
+        <b>Choose Password:</b><br>
+		<input type="text" name="password">
 		<br><br>
-             
-		
+        <b>Confirm Password:</b><br>
+		<input type="password" name="c_password">
+		<br><br>
 		<input type="button" name="Login" value="Sign up">
 		</form>
 </body>
