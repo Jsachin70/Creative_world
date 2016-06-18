@@ -46,67 +46,11 @@ li a:hover:not(.active) {
 <body background="images/hospital1.jpg" width="200" height="100">
 	
 	<script>
-var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-var fso = new ActiveXObject("Scripting.FileSystemObject");
-var FILENAME = 'C:\\PersonXML_Data.xml';
-
-function SaveXML(UserData) 
-    {   
-        var file = fso.CreateTextFile(FILENAME, true);
-        file.WriteLine('<?xml version="1.0" encoding="utf-8"?>\n');
-        file.WriteLine('<PersonInfo>\n');
-
-        for (countr = 0; countr < UserData.length; countr++) {
-            file.Write('    <Person ');
-            file.Write('usrname="' + UserData[countr][0] + '" ');
-            file.Write('firstname="' + UserData[countr][1] + '" ');
-            file.Write('lastname="' + UserData[countr][2] + '" ');
-            file.Write('gender="' + UserData[countr][3] + '" ');
-            file.Write('usertype="' + UserData[countr][4] + '" ');
-            file.Write('email="' + UserData[countr][5] + '" ');
-            file.Write('pswrd="' + UserData[countr][6] + '" ');
-            file.WriteLine('></Person>\n');
-        } // end for countr
-
-        file.WriteLine('</PersonInfo>\n');
-        file.Close();
-
-    } // end SaveXML function --------------------
-	
-	function initialize_array() 
-    {
-        var person = new Array();
-        var noFile = true;
-        var xmlObj;
-        if (fso.FileExists(FILENAME)) 
-        {
-            xmlObj = LoadXML(FILENAME);
-            noFile = false;
-            } // if
-        else 
-        {
-            xmlObj = LoadXML("PersonXML.xml");
-            //alert("local" + xmlObj);
-            } // end if
-
-        var usrCount = 0;
-        while (usrCount < xmlObj.childNodes.length) 
-        {
-            var tmpUsrs = new Array(xmlObj.childNodes(usrCount).getAttribute("usrname"),
-                                    xmlObj.childNodes(usrCount).getAttribute("firstname"),
-                        xmlObj.childNodes(usrCount).getAttribute("lastname"),
-                                    xmlObj.childNodes(usrCount).getAttribute("gender"),
-                                    xmlObj.childNodes(usrCount).getAttribute("usertype"),
-                                    xmlObj.childNodes(usrCount).getAttribute("email"),
-                                    xmlObj.childNodes(usrCount).getAttribute("pswrd"));
-            person.push(tmpUsrs);
-            usrCount++;
-             }   //end while
-        if (noFile == false)
-            fso.DeleteFile(FILENAME);
-        SaveXML(person);
-    }
-
+	function nameJS() {
+			var b = document.getElementById('fname').value,
+			url = 'Patient_Profile.html?name=' + encodeURIComponent(b);
+			document.location.href = url;
+	}
 </script>
 <ul1 style="float:right">
   <li><font size="2"><a  href="login.html">login</a></font></li>
@@ -129,7 +73,7 @@ function SaveXML(UserData)
 <form>
         <br><H1><font color="white">User Register</font></H1>
 		<b>First name:</b><br>
-		<input type="text" name="First name">
+		<input type="text" id="fname" name="fsname">
 		<br>
         <b>Last name:</b><br>
 		<input type="text" name="Last name">
@@ -137,7 +81,7 @@ function SaveXML(UserData)
         <b>Are you ?</b><br>
         <input type="radio" name="gender" value="female">female&nbsp;&nbsp;
 		<input type="radio" name="gender" value="male">male<br><br>
-	<b>User Type:</b>
+		<b>User Type:</b>
 		<select name="usertype">
 			<option value="select">Select</option>
 			<option value="volvo">Patient</option>
@@ -163,7 +107,7 @@ function SaveXML(UserData)
         <b>Confirm Password:</b><br>
 		<input type="password" name="c_password">
 		<br><br>
-		<input type="button" name="Login" value="Sign up">
+		<input type="button" id="Login" value="Sign up" onclick="nameJS()">
 		</form>
 </body>
 </body>
