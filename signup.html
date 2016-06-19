@@ -47,9 +47,23 @@ li a:hover:not(.active) {
 	
 	<script>
 	function nameJS() {
-			var b = document.getElementById('fname').value,
-			url = 'Patient_Profile.html?name=' + encodeURIComponent(b);
-			document.location.href = url;
+			var fname = document.getElementById('fname').value;
+			var email = document.getElementById('email').value;
+			var cemail = document.getElementById('c_email').value;
+			var pass = document.getElementById('password').value;
+			var cpass = document.getElementById('c_password').value;
+			if (pass == cpass && email == cemail) {
+				if (pass.length >= 6){
+					url = 'Patient_Profile.html?name=' + encodeURIComponent(fname);
+					document.location.href = url;
+				}
+				else {
+					alert("Your password length is less than 6");
+				}
+			}
+			else {
+				alert("Your password or email didn't match");
+			}
 	}
 </script>
 <ul1 style="float:right">
@@ -76,7 +90,7 @@ li a:hover:not(.active) {
 		<input type="text" id="fname" name="fsname">
 		<br>
         <b>Last name:</b><br>
-		<input type="text" name="Last name">
+		<input type="text" id="lname" name="lsname">
 		<br><br>
         <b>Are you ?</b><br>
         <input type="radio" name="gender" value="female">female&nbsp;&nbsp;
@@ -89,23 +103,16 @@ li a:hover:not(.active) {
 		</select>
 		<br><br>
         <b>Email Address:</b><br>
-		<input type="text" name="email">
-		<br><br>
-		<b>User Type:</b>
-		<select name="usertype">
-			<option value="select">Select</option>
-			<option value="volvo">Patient</option>
-			<option value="saab">Doctor</option>
-		</select>
+		<input id= "email"type="text" name="email">
 		<br><br>
         <b>Confirm Email Address:</b><br>
-		<input type="text" name="c_email">
+		<input id= "c_email" type="text" name="c_email">
 		<br><br>
         <b>Choose Password:</b><br>
-		<input type="text" name="password">
+		<input id= "password" type="password" name="password">
 		<br><br>
         <b>Confirm Password:</b><br>
-		<input type="password" name="c_password">
+		<input id= "c_password" type="password" name="c_password">
 		<br><br>
 		<input type="button" id="Login" value="Sign up" onclick="nameJS()">
 		</form>
