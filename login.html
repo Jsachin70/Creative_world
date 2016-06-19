@@ -4,6 +4,7 @@
 	<title> login 
 	</title>
 <head>
+
 <style>
 ul {
     list-style-type: none;
@@ -44,8 +45,24 @@ li a:hover:not(.active) {
 }
 </style>
 </head>
+
 <body>
 <body background="images/hospital1.jpg" width="200" height="100">
+
+<script>
+	function nameJS() {
+		var uname = document.getElementById('uname').value;
+		var pass = document.getElementById('pass').value;
+		if (uname == 'Piyush' && pass == 'positive') {
+				url = 'Patient_Profile.html?name=' + encodeURIComponent(uname);
+				document.location.href = url;
+		}
+		else {
+			alert("Your password or username is wrong");
+		}
+	}
+</script>
+
 <ul1 style="float:right">
   <li><font size="2"><a class="active" href="login.html">login</a></font></li>
   <li><font size="2"><a href="signup.html">Sign up</a><font></li>
@@ -71,12 +88,12 @@ li a:hover:not(.active) {
 <form>
 <br><H1 align="center"><font color="white"><b>PATIENT PORTAL</b></H1>
 		<H2 align="center"><font color="white"><b>User name:</b></font>&nbsp;
-		<input type="text" name="user name"></H2>
+		<input id= "uname" type="text" name="username"></H2>
 		
 		<H2 align="center"><font color="white"> <b>Password:</b></font>&nbsp;&nbsp;
-		<input type="Password" name="Last Name"></H2>
+		<input id= "pass" type="Password" name="Password"></H2>
 		
-		<H2 align="center"><input type="button" name="Login" value="Enter"></H2>
+		<H2 align="center"><input type="button" id="Login" value="Enter" onclick="nameJS()"></H2>
 		</form>
 </div>
 
