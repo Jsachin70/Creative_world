@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <style>
-<title>Contact Us</title>
+<title>Annual Event 2</title>
 #header {
     background-color:#66453E;
     color:white;
@@ -23,13 +24,12 @@
     padding:10px;
 }
 #footer {
-    background-color:white;
+    background-color:black;
     color:white;
     clear:both;
     text-align:center;
     padding:5px;
 }
-
 ul {
     list-style-type: none;
     margin: 100;
@@ -37,6 +37,7 @@ ul {
     overflow: hidden;
     background-color: #003312;
 }
+
 ul1 {
     list-style-type: none;
     margin: 0;
@@ -44,9 +45,11 @@ ul1 {
     overflow: hidden;
     background-color: #006699;
 }
+
 li {
     float: left;
 }
+
 li a {
     display: block;
     color: white;
@@ -54,11 +57,25 @@ li a {
     padding: 20px 18px;
     text-decoration: none;
 }
+
 li a:hover:not(.active) {
     background-color: grey;
 }
+
+
+
 .active {
     background-color: green;
+	
+	
+}
+
+#rcorners1 {
+    border-radius: 25px;
+    background: #004080;
+    padding: 20px;
+    width: 200px;
+    height: 20px;
 }
 </style>
 </head>
@@ -69,7 +86,7 @@ li a:hover:not(.active) {
   <li><font size="2"><a href="signup.html">Sign up</a><font></li>
   <li><font size="2"><a href="about_us.html">About Apolo</a></font></li>
   <li><font size="2"><a href="contact_us1.html">Send us message</a></font></li>
-  <li><font size="2"><a href="events.html">Events</a></font></li>
+  <li><font size="2"><a class="active" href="events.html">Events</a></font></li>
   <li><font size="2"><a href="news_room.html">News Room</a></font></li>
 </ul1>
 <H1 align="left"><img src="images/logo1.png" width="130" height="100" alt="Test Image"/></H1>
@@ -78,55 +95,73 @@ li a:hover:not(.active) {
   <li><font size="4"><a href="#phy">PHYSICIANS</a></font></li>
     <li><font size="4"><a href="login.html">PATIENTS AND FAMILIES</a></font></li>
 	  <li><font size="4"><a href="#patandfam">CONDITIONS AND TREATMENT</a></font></li>
-	    <li><font size="4"><a class="active" href="contact_us.html">CONTACT AND LOCATIONS</a></font></li>
+	    <li><font size="4"><a href="contact_us.html">CONTACT AND LOCATIONS</a></font></li>
 		<li><font size="4"><a href="#patandfam">QUALITY CARE</a></font></li>
   <li><font size="4"><a href="#contact"></a></font></li>
 </ul>
 
-<h1>CONTACT US</h1>
-<div style="background-color:#002233; height:500px; float:left; width: 35%">
+<div id="header">
+<h1>Up coming Events</h1>
+</div>
+<br>
+<div id="nav">
 
-<p align="left"><font color="white" size="2">If you have a question about a medical need, want to register for a class, or need to schedule an appointment with a physician, 
-please dial our Call Center, 1-800-472-8500. If you are having a medical emergency, call 911 or proceed to the nearest emergency department. 
-Questions and comments that are submitted through our web site are reviewed one time a day. 
-The webmaster will route your question or comment to the appropriate department for response. Thank you.</font></p>
 <form>
-<b><font color="white">* indicates required field</font></b><br><br>
-        <b><font color="white">FULL NAME:</font></b>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name">
-		<br><br>
-
-        <b><font color="white">CONTACT EMAIL:</font></b>
-		<input type="text" name="emaIL">
-		<br><br> 
-		
-		 <b><font color="white">LOCATION:</font></b>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select>
-		<option value="aplohealth">APOLLO  HEALTH</option>
-		<option value="aplomedcntr">APOLLO  MEDICAL CENTRE</option>
-		<option value="aplohealth">APOLLO  EDGE COMBE HOSPITAL</option>
-		<option value="aplohealth1">APOLLO  DUPLIN HOSPITAL</option>
-		<option value="aplohealth2">THE OUTER BANK HOSPITAL</option>
-		<option value="aplohealth3">BEAFURT HOSPITAL</option>
+<font size="3"><b>Select Location:</b></font><br>
+        <select>
+		<option value="aplohealth">ALL</option>
+		<option value="aplohealth">Apollo Health</option>
+		<option value="aplomedcntr">Apollo Medical Center</option>
+		<option value="aplohealth">Apollo Edge Combe Hospital</option>
+		<option value="aplohealth1">Apollo Duplin Hospital</option>
+		<option value="aplohealth2">The Outer Bank Hospital</option>
+		<option value="aplohealth3">Beafurt Hospital</option>
 		</select>
-		<br><br> 
-		<b><font color="white">SUBJECT:</font></b>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name">
-		<br><br>
-		 <b><font color="white">MESSAGE:</font></b><br>
-		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 
-		 <textarea name="name1 cols="20" rows="5">
-		 </textarea><br><br>
-		 
-		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="sub" value="GO"><br>
-       
+		
+		<font size="3"><b>Clinical Services:</b></font><br>
+        <select>
+		<option value="aplohealth">ALL</option>
+		<option value="aplohealth">Carolina Heart Institue</option>
+		<option value="aplomedcntr">Cancer Care</option>
+		<option value="aplohealth">Apollo SergiCentre</option>
+		<option value="aplohealth1">Wound Healing Centre</option>
+		<option value="aplohealth2">Patient Testing Centre</option>
+		</select><br>
+
+		<font size="3"><b>Show Event Types:</b></font><br>
+        <select>
+		<option value="aplohealth">ALL</option>
+		<option value="aplomedcntr">Cancer</option>
+		<option value="aplohealth">Stroke</option>
+		<option value="aplohealth1">Women's</option>
+		<option value="aplohealth2">wellness and Preventation</option>
+		<option value="aplohealth2">Emergency</option>
+		<option value="aplohealth2">Other</option>
+		</select><br>
+		
+		<font color="white"><input type="submit" value="GO"></font>
 </form>
 </div>
 
-<br><br><br><br><br><br><br><br><br><br>
+<div id="section">
+<h2><font color="red">JUNE 2016</font></h2>
+<div style="background-color:#4B73A0; height:45px; float:left; width: 9%">
+<p>JUNE 23</p></div>&nbsp;<font size="5" color="#443552"><b>FREE Stroke Screening </b></font><br>
+<font size="3"><p align="center"><b>June 23, 2016, 9:00am-1:00Pm<br>
+Contact : <br>
+Contact Information : 1-800-472-8500<br>
+Location: Location: St. Thomas Episcopal Church<br>
+Cost : $ FREE<br>
+Sponsor : Apollo Hospital</b></p></font><br>
+
+<p align="center"><pre><font color="black" size="4"><b>Register now for Vidant Bertie Hospital’s FREE stroke screening.
+ Thursday, June 23rd from 9 a.m. - 1 p.m. located at St. 
+ Thomas Episcopal Church, 302 South Queen Street, Windsor.  
+ Screening spots are limited, so register today by calling toll free 800-472-8500. 
+ Or online at VidantHealth.com/StrokeScreen.</b></font></pre></p> 
+
+</div>
+
 <div id="footer">
 </div>
 <marquee><center><font color="white" size="4"><a href="login.html">Login</a></font>
@@ -138,3 +173,8 @@ The webmaster will route your question or comment to the appropriate department 
 </body>
 </body>
 </html>
+
+
+
+
+
