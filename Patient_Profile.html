@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>	
+		ul {
+			list-style-type: none;
+			margin: 100;
+			padding: 200;
+			overflow: hidden;
+			background-color: #003312;
+		}
+
+		ul1 {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #006699;
+		}
+
+		li {
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 20px 18px;
+			text-decoration: none;
+		}
+
+		li a:hover:not(.active) {
+			background-color: grey;
+		}
+
+
+
+		.active {
+			background-color: green;
+		}
+	</style>
+	<script>
+			window.onload = function () {
+				var url = document.location.href,
+				params = url.split('?')[1].split('&'),
+				data = {}, tmp;
+				for (var i = 0, l = params.length; i < l; i++) {
+					tmp = params[i].split('=');
+					data[tmp[0]] = tmp[1];
+				}
+				document.getElementById('name').innerHTML = data.name;
+			}
+	</script>
+</head>
+<body>
+
+<body background="images/hospital1.jpg" width="200" height="100">
+<ul1 style="float:right">
+  <li><font size="2"><a href="login.html">Sign Out</a></font></li>
+  <li><font size="2"><a href="#contact">About Apolo</a></font></li>
+  <li><font size="2"><a href="#contact">Send us message</a></font></li>
+  <li><font size="2"><a href="#contact">Events</a></font></li>
+  <li><font size="2"><a href="#contact">News Room</a></font></li>
+</ul1>
+<H1 align="left"><img src="images/logo1.png" width="130" height="100" alt="Test Image"/></H1>
+<ul>
+	<li><font size="4"><a href="#home">HOME</a></font></li>
+	<li><font size="4"><a href="#phy">PHYSICIANS</a></font></li>
+	<li><font size="4"><a class="active" href="#patandfam">PATIENTS AND FAMILIES</a></font></li>
+	<li><font size="4"><a href="#patandfam">CONDITIONS AND TREATMENT</a></font></li>
+	<li><font size="4"><a href="#patandfam">CONTACT AND LOCATIONS</a></font></li>
+	<li><font size="4"><a href="#patandfam">QUALITY CARE</a></font></li>
+	<li><font size="4"><a href="#contact"></a></font></li>
+</ul>
+
+<H1 align="left"><p id="name" style="color: #FFFFFF; font-weight: lighter"></p></H1>
+</body>
+
+<table>
+	<tbody>
+		<tr>
+			<td style="width: 310px" rowspan="2" colspan="2">
+				<img src="images/patient_image.png" height="450" width ="300"/>
+			</td>
+			<td valign="top" colspan="2" style="width: 800px; background-color:#3481C8">
+				<h2 style="color:#FFFFFF; font-weight: lighter">Contact Information</h2>
+				<table>
+					<tr>
+						<td rowspan="1" colspan="1" style="width: 400px">
+							<h3 style="color:#FFFFFF; font-weight: lighter">Address</h3>
+							<p id="address" style="color:#FFFFFF; font-weight: lighter">Apt# 501, 2255 Rue Saint Mathieu, Montreal QC Canada H3H2J6</p>
+						</td>
+						<td style="width: 400px">
+							<h3 style="color:#FFFFFF; font-weight: lighter">Phone</h3>
+							<p id="phone" style="color:#FFFFFF; font-weight: lighter">+1 (438) 999-9999</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+							<h3 style="color:#FFFFFF; font-weight: lighter">Email</h3>
+							<p id="email" style="color:#FFFFFF; font-weight: lighter">test@hospital.com</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" style="width: 400px; background-color:#3481C8">
+				<h2 style="color:#FFFFFF; font-weight: lighter">Notes</h2>
+			</td>
+			<td valign="top" style="width: 400px; background-color:#99C6F7">
+				<h2 style="color:#FFFFFF; font-weight: lighter">Last Time Report</h2>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+
+
+</html>
+

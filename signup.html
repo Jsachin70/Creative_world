@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 100;
+    padding: 200;
+    overflow: hidden;
+    background-color: #003312;
+}
+
+ul1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #006699;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 18px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: grey;
+}
+
+
+
+.active {
+    background-color: green;
+}
+</style>
+</head>
+<body>
+<body background="images/hospital1.jpg" width="200" height="100">
+	
+	<script>
+	function nameJS() {
+			var fname = document.getElementById('fname').value;
+			var email = document.getElementById('email').value;
+			var cemail = document.getElementById('c_email').value;
+			var pass = document.getElementById('password').value;
+			var cpass = document.getElementById('c_password').value;
+			if (pass == cpass && email == cemail) {
+				if (pass.length >= 6){
+					url = 'Patient_Profile.html?name=' + encodeURIComponent(fname);
+					document.location.href = url;
+				}
+				else {
+					alert("Your password length is less than 6");
+				}
+			}
+			else {
+				alert("Your password or email didn't match");
+			}
+	}
+</script>
+<ul1 style="float:right">
+  <li><font size="2"><a  href="login.html">login</a></font></li>
+  <li><font size="2"><a class="active" href="signup.html">Sign up</a><font></li>
+  <li><font size="2"><a href="#contact">About Apolo</a></font></li>
+  <li><font size="2"><a href="#contact">Send us message</a></font></li>
+  <li><font size="2"><a href="#contact">Events</a></font></li>
+  <li><font size="2"><a href="#contact">News Room</a></font></li>
+</ul1>
+<H1 align="left"><img src="images/logo1.png" width="130" height="100" alt="Test Image"/></H1>
+<ul>
+  <li><font size="4"><a href="#home">HOME</a></font></li>
+  <li><font size="4"><a href="#phy">PHYSICIANS</a></font></li>
+    <li><font size="4"><a href="#patandfam">PATIENTS AND FAMILIES</a></font></li>
+	  <li><font size="4"><a href="#patandfam">CONDITIONS AND TREATMENT</a></font></li>
+	    <li><font size="4"><a href="#patandfam">CONTACT AND LOCATIONS</a></font></li>
+		<li><font size="4"><a href="#patandfam">QUALITY CARE</a></font></li>
+  <li><font size="4"><a href="#contact"></a></font></li> 
+</ul>
+<form>
+        <br><H1><font color="white">User Register</font></H1>
+		<b>First name:</b><br>
+		<input type="text" id="fname" name="fsname">
+		<br>
+        <b>Last name:</b><br>
+		<input type="text" id="lname" name="lsname">
+		<br><br>
+        <b>Are you ?</b><br>
+        <input type="radio" name="gender" value="female">female&nbsp;&nbsp;
+		<input type="radio" name="gender" value="male">male<br><br>
+		<b>User Type:</b>
+		<select name="usertype">
+			<option value="select">Select</option>
+			<option value="volvo">Patient</option>
+			<option value="saab">Doctor</option>
+		</select>
+		<br><br>
+        <b>Email Address:</b><br>
+		<input id= "email"type="text" name="email">
+		<br><br>
+        <b>Confirm Email Address:</b><br>
+		<input id= "c_email" type="text" name="c_email">
+		<br><br>
+        <b>Choose Password:</b><br>
+		<input id= "password" type="password" name="password">
+		<br><br>
+        <b>Confirm Password:</b><br>
+		<input id= "c_password" type="password" name="c_password">
+		<br><br>
+		<input type="button" id="Login" value="Sign up" onclick="nameJS()">
+		</form>
+</body>
+</body>
+</html>
+
+
